@@ -172,7 +172,7 @@
     type: single_value
     fields: [sales_orders.dash_nav]
     filters:
-      sales_orders.creation_date_erdat_date: 2022/01/01 to 2022/04/22
+      sales_orders.creation_date_erdat_date: 2024/09/01 to 2024/12/31
     limit: 500
     column_limit: 50
     custom_color_enabled: true
@@ -201,7 +201,7 @@
   - name: Year
     title: Year
     type: field_filter
-    default_value: 2022/01/01 to 2022/04/22
+    default_value: 2024/09/01 to 2024/12/31
     allow_multiple_values: true
     required: false
     ui_config:
