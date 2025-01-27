@@ -1,7 +1,7 @@
 view: materials_md {
   sql_table_name: `@{GCP_PROJECT}.@{REPORTING_DATASET}.MaterialsMD`
     ;;
-  
+
   fields_hidden_by_default: yes
 
   dimension: key {
@@ -9,7 +9,7 @@ view: materials_md {
     primary_key: yes
     sql: CONCAT(${client_mandt},${material_number_matnr},${language_spras});;
   }
-  
+
   dimension: acceptance_at_origin_weora {
     type: string
     sql: ${TABLE}.AcceptanceAtOrigin_WEORA ;;
@@ -910,6 +910,37 @@ view: materials_md {
     type: number
     sql: ${TABLE}.Width_BREIT ;;
   }
+
+  dimension: followup_material {
+    type: string
+    sql: ${TABLE}.FollowUp_Material ;;
+    hidden: no
+  }
+
+  dimension: season_of_introduction {
+    type: string
+    sql: ${TABLE}.Season_of_Introduction ;;
+    hidden: no
+  }
+
+  dimension: shop_live_date {
+    type: date
+    sql: ${TABLE}.Shop_Live_Date ;;
+    hidden: no
+  }
+
+  dimension: launch_date {
+    type: date
+    sql: ${TABLE}.Launch_Date ;;
+    hidden: no
+  }
+
+  dimension: retirement_global {
+    type: string
+    sql: ${TABLE}.Retirement_Global ;;
+    hidden: no
+  }
+
 
   measure: count {
     type: count
